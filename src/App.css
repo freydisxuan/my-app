@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #ffffff;
 }
 
 .App-logo {
@@ -9,9 +9,8 @@
 } 
 
 .App-header {
-  margin-left: 25%;
+  /* margin-left: 25%;
   width: 50%;
-  background-color: #141414;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,11 +18,34 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  border-radius: 12.5rem;
+  border-radius: 12.5rem; */
+
+  width: 40%;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+background: radial-gradient(circle at 50% 0%, rgb(149, 175, 192) 36%, rgb(255, 255, 255) 36%);
+ min-width: 400px;
+  background-color: #eff3ff;
+  padding: 6px 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    margin: 2rem;
+}
+.card img {
+  display: block;
+  width: 180px;
+  max-height: 200px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.h1 {
+  padding-top: 12px;
+  margin: auto;
 }
 
 .ButtonWrapper input{
@@ -44,18 +66,49 @@
 }
 
 .ButtonWrapper button {
-  background-color: #d6d6d6;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  color: #282c34;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-
+    display: block;
+    padding: 15px 60px;
+    font-size: 18px;
+    background-color: #101010;
+    color: #ffffff;
+    position: relative;
+    margin: 30px auto;
+    border: none;
+    border-radius: 5px;
 }
 
 .InfoWrapper > * {
   font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.poke-name {
+  text-align: center;
+  font-weight: 800;
+}
+
+.hp {
+  text-align: center;
+  background-color:#95AFC0;
+  padding: 8px 12px; 
+  border-radius: 30px;
+  margin: 0 auto;
+  font-weight: 400;
+  width: 100px;
+}
+
+.height-weight-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%; 
+}
+
+.height,
+.weight {
+  margin-top: -2px;
+  padding-left: 10px;
 }

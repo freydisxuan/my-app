@@ -9,6 +9,25 @@ function App() {
   const [search, setSearch] = useState('');
   const [image, setImage] = useState(logo);
 
+  // const typeColor = {
+  //   bug: "#26de81",
+  //   dragon: "#ffeaa7",
+  //   electric: "#fed330",
+  //   fairy: "#FF0069",
+  //   fighting: "#30336b",
+  //   fire: "#f0932b",
+  //   flying: "#81ecec",
+  //   grass: "#00b894",
+  //   ground: "#EFB549",
+  //   ghost: "#a55eea",
+  //   ice: "#74b9ff",
+  //   normal: "#95afc0",
+  //   poison: "#6c5ce7",
+  //   psychic: "#a29bfe",
+  //   rock: "#2d3436",
+  //   water: "#0190FF",
+  // };
+
   useEffect(() => {
     generateRandom();
   }, []);
@@ -31,20 +50,25 @@ function App() {
     }
     const typeTitle = types.length > 1 ? 'Types:' : 'Type:';
     const abilityTitle = abilities.length > 1 ? 'Abilities:' : 'Ability:';
+    // const themeColor = typeColor[data.types[0].type.name];
     return (
       <>
-        <p>Hp: {data.stats[0]['base_stat']}</p>
+        <p className='poke-name'>{data.name[0].toUpperCase() + data.name.slice(1)}</p>
+        <p className='hp'>HP: {data.stats[0]['base_stat']}</p>
         {types.length > 0 && 
-          <p>{typeTitle} {types.join(', ')}</p>
+          <p className='types'>{typeTitle} {types.join(', ')}</p>
         }
         {abilities.length > 0 && 
           <p>{abilityTitle} {abilities.join(', ')}</p>
         }
-        <p>Height: {data.height*10} cm</p>
-        <p>Weight: {data.weight/10} kg</p>
+       <section className='height-weight-container'>
+        <p className='height'>Height: {data.height*10} cm</p>
+        <p className='weight'>Weight: {data.weight/10} kg</p>
+       </section>
       </>
     )
   }, [data])
+  
 
   const updateSearch = useCallback((e) => {
     setSearch(e.target.value);
@@ -79,16 +103,21 @@ function App() {
     })
   }, [data]);
 
+  
+
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Pokémon search</h1>
+        <div className='card'>
         <img src={image} className="App-logo" alt="logo" />
         <div className="ButtonWrapper">
-          <input type="text" value={search} onChange={(e) => updateSearch(e)} onKeyDown={(e) => e.key === 'Enter' && getData(search)} />
-          <button onClick={() => generateRandom()}>Random</button>
+          <input type="text" value={search} onChange={(e) => updateSearch(e)} onKeyDown={(e) => e.key === 'Enter' && getData(search)} placeholder="Enter Pokémon name"/>
+          <button onClick={() => generateRandom()}>Generate random pokémon!</button>
         </div>
         <div className="InfoWrapper">
           {generateInfo}
+        </div>
         </div>
       </header>
     </div>
