@@ -44,8 +44,8 @@
 .ButtonWrapper input{
   background-color: #d6d6d6;
   border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  padding: 6px 52px;
   font-size: 1.5rem;
   color: #282c34;
   cursor: url(https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png) , pointer !important;
@@ -69,6 +69,12 @@
     border: none;
     border-radius: 5px;
     cursor: url(https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png) , pointer !important;
+}
+
+.ButtonWrapper button:hover{
+  transition: all 0.3s ease-in-out;
+  background-color: #565a62;
+  color: #ffffff;
 }
 
 .InfoWrapper > * {
@@ -105,4 +111,10 @@
 .weight {
   margin-top: -2px;
   padding-left: 10px;
+}
+
+.search{
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 2px;
 }
