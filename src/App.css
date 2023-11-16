@@ -1,6 +1,11 @@
+* {
+  cursor: url(https://cdn.custom-cursor.com/db/9958/32/minimal-pokeball-cursor.png) , default !important;
+}
+
 .App {
   text-align: center;
   background-color: #ffffff;
+  justify-content: center;
 }
 
 .App-logo {
@@ -9,31 +14,19 @@
 } 
 
 .App-header {
-  /* margin-left: 25%;
-  width: 50%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  border-radius: 12.5rem; */
-
-  width: 40%;
+  width: fit-content;
   margin: auto;
 }
 
 .card {
-background: radial-gradient(circle at 50% 0%, rgb(149, 175, 192) 36%, rgb(255, 255, 255) 36%);
- min-width: 400px;
+  min-width: fit-content;
   background-color: #eff3ff;
   padding: 6px 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-    margin: 2rem;
+  font-family: Poppins, sans-serif;
+  margin: 2rem;
 }
 .card img {
   display: block;
@@ -52,12 +45,12 @@ background: radial-gradient(circle at 50% 0%, rgb(149, 175, 192) 36%, rgb(255, 2
   background-color: #d6d6d6;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   font-size: 1.5rem;
   color: #282c34;
-  cursor: pointer;
+  cursor: url(https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png) , pointer !important;
   transition: all 0.3s ease-in-out;
-  text-align: center;
+  text-align: center;  
 }
 
 .ButtonWrapper input:hover {
@@ -75,6 +68,7 @@ background: radial-gradient(circle at 50% 0%, rgb(149, 175, 192) 36%, rgb(255, 2
     margin: 30px auto;
     border: none;
     border-radius: 5px;
+    cursor: url(https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png) , pointer !important;
 }
 
 .InfoWrapper > * {
@@ -92,7 +86,7 @@ background: radial-gradient(circle at 50% 0%, rgb(149, 175, 192) 36%, rgb(255, 2
 
 .types {
   text-align: center;
-  background-color:#95AFC0;
+  width: fit-content;
   padding: 8px 12px; 
   border-radius: 30px;
   margin: 0 auto;
