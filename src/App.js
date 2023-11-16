@@ -122,6 +122,7 @@ function App() {
         <div className='card' style={{ background: `radial-gradient(circle at 50% 0%, ${color} 36%, rgb(255, 255, 255) 36%)` }}>
           <img src={image} className="App-logo" alt="logo" />
           <div className="ButtonWrapper">
+            <p>Search:</p>
             <input type="text" spellCheck={false} value={search} onChange={(e) => updateSearch(e)} onKeyDown={(e) => e.key === 'Enter' && getData(search)} placeholder="Enter Pokémon Name"/>
             <button onClick={() => generateRandom()}>Generate Random Pokémon!</button>
           </div>
