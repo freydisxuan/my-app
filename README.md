@@ -11,3 +11,8 @@ Fyrir random virknina framkallar síðan slembitölu á bilinu 1-1016 og kallar 
 [PokeAPI Docs](https://pokeapi.co/docs/v2)
 
 [Pokémon Cursor](https://custom-cursor.com/en/collection/minimal-style/minimal-poke-ball)
+
+Website: 
+https://pokemon-search-teehee.netlify.app/
+
+i love poppinpigeon999
